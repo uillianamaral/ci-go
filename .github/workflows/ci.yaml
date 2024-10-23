@@ -13,7 +13,10 @@ jobs:
         go: ['1.23']
 
     steps:
-      - uses: actions/checkout@v2
+
+      - name: Check out repository
+        uses: actions/checkout@v3
+
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
